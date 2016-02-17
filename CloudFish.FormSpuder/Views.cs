@@ -122,6 +122,7 @@ namespace CloudFish.FormSpider
 
         }
 
+
         /// <summary>
         /// Form Controls
         /// </summary>
@@ -146,6 +147,24 @@ namespace CloudFish.FormSpider
 
             }
             return list;
+        }
+
+        public static List<SmartFormViewProperties> GetControlProperties(string ViewName, Guid ControlGUID)
+        {
+            List<SmartFormView> list = new List<SmartFormView>();
+            FormsManager frm = new FormsManager("dlx", 5555);
+
+            SourceCode.Forms.Authoring.View view = new SourceCode.Forms.Authoring.View(frm.GetViewDefinition(ViewName));
+
+            SourceCode.Forms.Authoring.Control control = view.Controls[ControlGUID];
+
+            Properties prop = new Properties();
+            return prop.ArtefactProperties(control.Properties);
+
+
+
+
+
         }
         /// <summary>
         /// Form Events

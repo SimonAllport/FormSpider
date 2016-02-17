@@ -162,12 +162,31 @@ namespace CloudFish.FormSpider
                 {
                     name = control.Name,
                     type = control.Type,
-                guid = control.Guid,
-       
+                guid = control.Guid
                 });
 
             }
             return list;
+        }
+
+
+        public static List<SmartFormViewProperties> GetControlProperties(string FormName,Guid ControlGUID)
+        {
+            List<SmartFormView> list = new List<SmartFormView>();
+            FormsManager frm = new FormsManager("dlx", 5555);
+
+
+            SourceCode.Forms.Authoring.Form form = new SourceCode.Forms.Authoring.Form(frm.GetFormDefinition(FormName));
+
+            SourceCode.Forms.Authoring.Control control = form.Controls[ControlGUID];
+            
+            Properties prop = new Properties();
+            return prop.ArtefactProperties(control.Properties);
+
+
+
+
+
         }
          /// <summary>
          /// Form Events

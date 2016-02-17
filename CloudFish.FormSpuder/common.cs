@@ -183,26 +183,11 @@ namespace CloudFish.FormSpider
             set;
         }
 
-        //public SourceCode.Forms.Authoring.Eventing.ConditionCollection Conditions
-        //{
-        //    get;
-        //    set;
-        //}
-
-        //public SourceCode.Forms.Authoring.Eventing.ActionCollection Actions
-        //{
-        //    get;
-        //    set;
-        //}
     }
 
     public class SmartFormViewConditions
     {
-        //public SourceCode.Forms.Authoring.PropertyCollection Property
-        //{
-        //    get;
-        //    set;
-        //}
+       
 
         public Guid GUID
         {
@@ -222,29 +207,7 @@ namespace CloudFish.FormSpider
             set;
         }
 
-        //public SourceCode.Forms.Authoring.PropertyCollection properties
-        //{
-        //    get;
-        //    set;
-
-        //}
-        //public SourceCode.Forms.Authoring.Eventing.MappingCollection parameters
-        //{
-        //    get;
-        //    set;
-        //}
-
-        //public SourceCode.Forms.Authoring.Eventing.MappingCollection results
-        //{
-        //    get;
-        //    set;
-        //}
-
-        //public SourceCode.Forms.Authoring.ValidationResult validation
-        //{
-        //    get;
-        //    set;
-        //}
+      
 
         public Guid viewguid
         {
@@ -287,12 +250,7 @@ namespace CloudFish.FormSpider
     public class SmartFormViewActionParameters
     {
 
-        //public SourceCode.Forms.Authoring.ValidationResult validation
-        //{
-
-        //    get;
-        //    set;
-        //}
+      
 
 
 
@@ -353,11 +311,7 @@ namespace CloudFish.FormSpider
             set;
         }
 
-        //public SourceCode.Forms.Authoring.ValidationMessageCollection messages
-        //{
-        //    get;
-        //    set;
-        //}
+       
     }
 
     public class SmartFormViewActionValidationMessage
