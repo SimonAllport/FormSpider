@@ -74,9 +74,68 @@ namespace CloudFish.FormSpider
             return list;
         }
 
+       /// <summary>
+       /// Views connected to workflow
+       /// </summary>
+       /// <param name="workflow"></param>
+       /// <returns></returns>
+        public static List<SmartFormView> GetViewsByProcess(string workflow)
+        {
+            List<SmartFormView> list = new List<SmartFormView>();
+            FormsManager frm = new FormsManager("dlx", 5555);
+            ViewExplorer formexplorer = frm.GetViewsForProcess(workflow);
+            foreach (SourceCode.Forms.Management.ViewInfo viewinfo in formexplorer.Views)
+            {
+
+                SourceCode.Forms.Authoring.View view = new SourceCode.Forms.Authoring.View(frm.GetViewDefinition(viewinfo.Name));
+
+                list.Add(new SmartFormView
+                {
+                    name = viewinfo.Name,
+                    displayname = viewinfo.DisplayName,
+                    description = viewinfo.Description,
+                    guid = viewinfo.Guid,
+                    version = viewinfo.Version,
 
 
+                });
 
+            }
+            return list;
+        }
+
+
+       /// <summary>
+       /// Get views by smartobject
+       /// </summary>
+       /// <param name="SmartObjectGUID"></param>
+       /// <returns></returns>
+        public static List<SmartFormView> GetViewsBySmartObject(Guid SmartObjectGUID)
+        {
+            List<SmartFormView> list = new List<SmartFormView>();
+            FormsManager frm = new FormsManager("dlx", 5555);
+            ViewExplorer formexplorer = frm.GetViewsForObject(SmartObjectGUID);
+            foreach (SourceCode.Forms.Management.ViewInfo viewinfo in formexplorer.Views)
+            {
+
+                SourceCode.Forms.Authoring.View view = new SourceCode.Forms.Authoring.View(frm.GetViewDefinition(viewinfo.Name));
+
+                list.Add(new SmartFormView
+                {
+                    name = viewinfo.Name,
+                    displayname = viewinfo.DisplayName,
+                    description = viewinfo.Description,
+                    guid = viewinfo.Guid,
+                    version = viewinfo.Version,
+
+
+                });
+
+            }
+            return list;
+        }
+
+    
         /// <summary>
         /// List of form properties 
         /// </summary>
@@ -181,8 +240,6 @@ namespace CloudFish.FormSpider
             {
 
 
-                if (ev.SourceType == SourceCode.Forms.Authoring.Eventing.EventSourceType.Rule)
-                {
                     list.Add(new SmartFormViewEvents
                     {
                         name = ev.Name,
@@ -192,7 +249,7 @@ namespace CloudFish.FormSpider
 
                     });
 
-                }
+                
             }
 
             return list;

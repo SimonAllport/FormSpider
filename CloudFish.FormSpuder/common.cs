@@ -320,4 +320,224 @@ namespace CloudFish.FormSpider
         public string message { get; set; }
     }
 
+    public class Smartformlist
+    {
+
+        public string Name
+        { get; set; }
+
+        public string Description
+        { get; set; }
+
+        public Guid guid
+        { get; set; }
+
+        public string displayname
+        { get; set; }
+
+        public string Url
+        { get; set; }
+
+        public string ArtefactType
+        { get; set; }
+
+        public string Service
+        { get; set; }
+        public string Version
+        { get; set; }
+
+        public string FormNumber
+        { get; set; }
+
+        public string ProcessMapNumber
+        { get; set; }
+    }
+
+    public class SmartObject
+    {
+
+        public string Name
+        { get; set; }
+
+        public string Description
+        { get; set; }
+
+        public Guid guid
+        { get; set; }
+
+        public string displayname
+        { get; set; }
+
+        public Guid ServiceGUID
+        { get; set; }
+
+        public string ArtefactType
+        { get; set; }
+
+        public string Service
+        { get; set; }
+        public string Version
+        { get; set; }
+
+    }
+
+
+    public class SmartObjectProperty
+    {
+
+        public string Name
+        { get; set; }
+
+        public string Description
+        { get; set; }
+
+       
+
+        public string displayname
+        { get; set; }
+
+        public Boolean isUnique
+        { get; set; }
+        public string Transaction
+        { get; set; }
+
+        public string Type
+        { get; set; }
+        
+    }
+
+
+
+    public class WorkFlow
+    {
+        public int ProcessId
+        { get; set; }
+
+        public int Instances
+        { get; set; }
+        public string Name
+        { get; set; }
+
+        public string Description
+        { get; set; }
+
+        public Guid guid
+        { get; set; }
+
+        public string displayname
+        { get; set; }
+
+        public string MetaData
+        { get; set; }
+
+        public int Priority
+        { get; set; }
+
+        public int ProcSetID
+        { get; set; }
+        public string Version
+        { get; set; }
+
+    }
+
+       public class WorkFlowDataFields
+    {
+
+        public string Name
+        { get; set; }
+
+        public string Category
+        { get; set; }
+
+       public string InitialValue
+        { get; set; }
+
+ public string Type
+        { get; set; }
+
+        public string MetaData
+        { get; set; }
+
+        public Boolean Hidden
+        { get; set; }
+       
+            public Boolean Audit
+        { get; set; }
+
+            public Boolean OnDemand
+            { get; set; }
+    }
+
+
+       public class WorkFlowActivities
+    {
+
+        public string Name
+        { get; set; }
+
+        public string Description
+        { get; set; }
+
+       public int ExpectedDuration
+        { get; set; }
+
+ public int ID
+        { get; set; }
+
+        public string MetaData
+        { get; set; }
+
+        public Boolean IsStart
+        { get; set; }
+       
+            public int Priority
+        { get; set; }
+
+    }
+
+
+       public class WorkFlowEvents
+    {
+
+        public string Name
+        { get; set; }
+
+        public string Description
+        { get; set; }
+
+       public int ExpectedDuration
+        { get; set; }
+
+ public int ID
+        { get; set; }
+
+        public string MetaData
+        { get; set; }
+
+        public Boolean IsStart
+        { get; set; }
+       
+            public int Priority
+        { get; set; }
+
+                public Boolean UseTrans
+        { get; set; }
+
+              public int Pos
+        { get; set; }
+
+              public Guid Excep
+        { get; set; }
+
+               public string EventType
+        { get; set; }
+
+                public string CredentialUser
+        { get; set; }
+
+                public Guid Code
+        { get; set; }
+    }
+
 }
+
