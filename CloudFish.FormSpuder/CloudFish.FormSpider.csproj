@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CloudFish.FormSpuder</RootNamespace>
     <AssemblyName>CloudFish.FormSpuder</AssemblyName>
-    <TargetFrameworkVersion>v4.5.3</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -85,16 +86,31 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="SourceCode.SmartObjects.Client">
+      <HintPath>K2 References\SourceCode.SmartObjects.Client.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="common.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="Controls.cs" />
+    <Compile Include="Parameters.cs" />
     <Compile Include="Properties.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules.cs" />
     <Compile Include="Smartform.cs" />
     <Compile Include="SmartObject.cs" />
+    <Compile Include="Validation.cs" />
     <Compile Include="Views.cs" />
+    <Compile Include="LookUpData.cs" />
+    <Compile Include="Workflow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Settings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -29,5 +29,22 @@ namespace CloudFish.FormSpider
             return list;
 
         }
+
+        public List<SmartFormViewParameters> ArtefactParameters(SourceCode.Forms.Authoring.ViewParameterCollection parameters)
+        {
+            List<SmartFormViewParameters> list = new List<SmartFormViewParameters>();
+            foreach (SourceCode.Forms.Authoring.ViewParameter parameter in parameters)
+            {
+                list.Add(new SmartFormViewParameters
+                {
+                    name = parameter.Name,
+                    type = parameter.DataType.ToString(),
+                    defaultvalue = parameter.DefaultValue
+                });
+            }
+
+            return list;
+
+        }
     }
 }

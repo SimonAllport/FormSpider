@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 namespace CloudFish.FormSpider
 {
 
+    public enum ControlExcludeList
+    {
+        Cell,
+        Row,
+        Table
+
+
+    }
 
     public class SmartFormViewSml
     {
@@ -79,6 +87,54 @@ namespace CloudFish.FormSpider
             set;
         }
 
+        public int State
+        {
+            get;
+            set;
+        }
+        public string CheckedOutBy
+        {
+            get;
+            set;
+        }
+
+        public Boolean CheckedOut
+        {
+            get;
+            set;
+        }
+
+        public string ModifiedBy
+        {
+            get;
+            set;
+        }
+
+        public DateTime ModifiedDate
+        {
+            get;
+            set;
+        }
+
+
+        public string CreatedBy
+        {
+            get;
+            set;
+        }
+
+        public DateTime CreatedDate
+        {
+            get;
+            set;
+        }
+        public Boolean Result
+        {
+            get;
+            set;
+        }
+
+       
     }
 
     public class SmartFormViewProperties
@@ -114,6 +170,18 @@ namespace CloudFish.FormSpider
         }
 
         public Guid guid
+        {
+            get;
+            set;
+        }
+
+        public string Field
+        {
+            get;
+            set;
+        }
+
+        public Boolean Result
         {
             get;
             set;
@@ -162,7 +230,11 @@ namespace CloudFish.FormSpider
             set;
         }
 
-        
+        public string SourceType
+        {
+            get;
+            set;
+        }
 
 
     }
@@ -221,6 +293,17 @@ namespace CloudFish.FormSpider
             set;
         }
 
+        public string view
+        {
+            get;
+            set;
+        }
+
+        public string form
+        {
+            get;
+            set;
+        }
         public string method
         {
             get;
@@ -299,6 +382,34 @@ namespace CloudFish.FormSpider
             get;
             set;
         }
+
+        public Guid sourceInstanceGuid
+        {
+
+            get;
+            set;
+        }
+
+          public Guid sourceSubFormGuid
+        {
+
+            get;
+            set;
+        }
+
+          public Guid targetInstanceGuid
+          {
+
+              get;
+              set;
+          }
+
+          public Guid targetSubFormGuid
+          {
+
+              get;
+              set;
+          }
     }
 
 
@@ -311,7 +422,11 @@ namespace CloudFish.FormSpider
             set;
         }
 
-       
+        public Guid ValidationGuid
+        {
+            get;
+            set;
+        }
     }
 
     public class SmartFormViewActionValidationMessage
@@ -378,7 +493,11 @@ namespace CloudFish.FormSpider
         { get; set; }
         public string Version
         { get; set; }
-
+        public Boolean Result
+        {
+            get;
+            set;
+        }
     }
 
 
@@ -408,7 +527,7 @@ namespace CloudFish.FormSpider
 
 
 
-    public class WorkFlow
+    public class Process
     {
         public int ProcessId
         { get; set; }
@@ -437,10 +556,14 @@ namespace CloudFish.FormSpider
         { get; set; }
         public string Version
         { get; set; }
-
+        public Boolean Result
+        {
+            get;
+            set;
+        }
     }
 
-       public class WorkFlowDataFields
+       public class ProcessDataFields
     {
 
         public string Name
@@ -469,7 +592,7 @@ namespace CloudFish.FormSpider
     }
 
 
-       public class WorkFlowActivities
+       public class ProcessActivities
     {
 
         public string Name
@@ -496,7 +619,7 @@ namespace CloudFish.FormSpider
     }
 
 
-       public class WorkFlowEvents
+       public class ProcessEvents
     {
 
         public string Name

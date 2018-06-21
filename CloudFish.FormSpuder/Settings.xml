@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+<Server>localhost</Server>
+      <Port>5555</Port>
+
+  <SmartObjectName>K2S_LKP_SMO_K2Spider</SmartObjectName>
+  <SmartObjectInputParameter>pControlType</SmartObjectInputParameter>
+  <SmartObjectMethod>List</SmartObjectMethod>
+  <SmartObjectProperty>Validation</SmartObjectProperty>
+  <Workflow>([A-Z0-9]{3}).([A-Z0-9]{3}).([WKF]{3}).([a-zA-Z0-9])</Workflow>
+      <SmartObject>([A-Z0-9]{3}).([A-Z0-9]{3}).([SMO]{3}).([a-zA-Z0-9])</SmartObject>
+      <Smartform>([A-Z0-9]{3}).([A-Z0-9]{3}).([SMF]{3}).([a-zA-Z0-9])</Smartform>
+      <View>([A-Z0-9]{3}).([A-Z0-9]{3}).([VWI-VWL]{3}).([a-zA-Z0-9])</View>
+      <theme></theme>
+</Settings>

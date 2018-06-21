@@ -11,12 +11,15 @@ namespace FormSpiderTest
         static void Main(string[] args)
         {
 
-           foreach (CloudFish.FormSpider.SmartFormView form in CloudFish.FormSpider.Smartform.GetAllForms())
-           {
+            CloudFish.FormSpider.Views.ViewControls("Ad Hoc Task Details Edit");
 
-               Console.WriteLine("Form Name:" + form.displayname);
-             
-           }
+
+            //foreach (CloudFish.FormSpider.SmartFormView form in CloudFish.FormSpider.Smartform.GetAllForms())
+            //{
+
+            //    Console.WriteLine("Form Name:" + form.displayname);
+
+            //}
 
            Console.ReadLine();
 
